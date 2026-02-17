@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kingraphy Studios</title>
+    
+    <link rel="icon" type="image/png" href="lib/kingraphy.png">
+
+    <meta property="og:title" content="Kingraphy Studios">
+    <meta property="og:image" content="lib/kingraphy.png">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            width: 100%;
+            overflow: hidden; /* Prevents scrolling */
+            background-color: #000;
+        }
+
+        /* Full Screen Image Container */
+        .fullscreen-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('lib/Kingraphy website.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            z-index: 1;
+        }
+
+        /* Social Icons Overlay */
+        .social-overlay {
+            position: absolute;
+            bottom: 30px;
+            left: 30px;
+            z-index: 10;
+            display: flex;
+            gap: 20px;
+        }
+
+        .social-icon {
+            color: white;
+            font-size: 24px;
+            text-decoration: none;
+            width: 55px;
+            height: 55px;
+            /* Using logo as background for the icon circle */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            position: relative;
+        }
+
+        /* Dark overlay inside the circle to ensure the white icons pop */
+        .social-icon::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.4); 
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .social-icon i {
+            position: relative;
+            z-index: 2;
+        }
+
+        .social-icon:hover {
+            transform: translateY(-5px) scale(1.1);
+            border-color: #fff;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+        }
+
+        /* Responsive adjustments for smaller screens */
+        @media (max-width: 600px) {
+            .social-overlay {
+                bottom: 25px;
+                left: 25px;
+                gap: 15px;
+            }
+            .social-icon {
+                width: 48px;
+                height: 48px;
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="fullscreen-bg"></div>
+
+    <div class="social-overlay">
+        <a href="https://www.instagram.com/kingraphystudios/" target="_blank" class="social-icon" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+        </a>
+    </div>
+
+</body>
+</html>
